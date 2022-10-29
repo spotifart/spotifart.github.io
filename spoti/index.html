@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify ss lyric</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.berkantkz.me/js/jquery-2.1.3.min.js"></script>
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+</head>
+
+<body>
+    <div class="left">
+        <form>
+            <input type="url" name="cover" id="cover" placeholder="albüm kapağı" oninput="setReady()">
+            <div>
+                <input type="text" name="spotify" id="song" placeholder="şarkı" oninput="setReady()">
+                <input type="text" name="spotify" id="artist" placeholder="sanatçı" oninput="setReady()">
+                <br>
+                <input type="checkbox" name="like" id="liked" oninput="setReady()" />
+                <label for="liked">kalpli</label>
+                <input type="checkbox" name="shuffled" id="shuffled" oninput="setReady()" />
+                <label for="shuffled">karıştır</label>
+                <input type="checkbox" name="playing" id="playing" oninput="setReady()" />
+                <label for="playing">oynatılıyor</label>
+                <br>
+                <!-- <input type="range" name="spotify" id="time" min="0" value="25" oninput="setReady()"> -->
+            </div>
+        </form>
+        <div class="songScreen" onclick="download()">
+            <img class="bg" src="assets/bg.png" alt="">
+            <img id="like" src="assets/liked.png" class="options hide" alt="">
+            <img id="shuffle" src="assets/shuffle.png" class="options hide" alt="">
+            <img id="play" src="assets/playing.png" class="options hide" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/tr/e/ef/Lorde_Melodrama_album_cover_2017_03_02.jpg" alt=""
+                class="albumCover">
+            <div class="songInfo">
+                <p class="songName">Supercut</p>
+                <p class="artistName">Lorde</p>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div id="download">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
