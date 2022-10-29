@@ -768,6 +768,16 @@ section {
   transition: 0.5s;
 }
 
+@media (min-width: 992px) {
+  .col-lg-8 {
+    width: 55.666667%;
+  }
+
+  .row {
+    --bs-gutter-x: 0 !important;
+  }
+}
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
@@ -775,6 +785,82 @@ section {
 
   .navbar ul {
     display: none;
+  }
+
+  .row {
+    --bs-gutter-x: 0 !important;
+  }
+
+  .row.align-items-center.first {
+    position: relative !important;
+  }
+
+  .hero-section, .hero-section>.container>.row {
+    height: inherit !important;
+    min-height: inherit !important;
+  }
+
+  #text_slogan {
+    width: inherit !important;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+
+  .control_actions {
+    flex-direction: column;
+  }
+
+  #btn_download {
+    margin: 10px;
+  }
+  
+  .hero-section .iphone-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px !important;
+  }
+
+  .songInfo {
+    text-align: left;
+  }
+
+  #samples .bcard .row:not(first-child) {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #samples .bcard .col-md-4 {
+    width: inherit;
+  }
+
+  .feature-1 img {
+    max-width: 50vw !important;
+  }
+
+  #share .row.align-items-center {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #share .col-md-6.me-auto.text-center.text-md-start.mb-5.mb-md-0.bcard {
+    margin-right: 0 !important;
+  }
+
+  #share .social-links {
+    gap: 1.3rem !important;
+  }
+
+  .social-links {
+    gap: 0 !important;
+  }
+
+  .col-md-7.bcard {
+    width: fit-content !important;
   }
 }
 
@@ -968,7 +1054,7 @@ section {
 
 @media screen and (max-width: 992px) {
   .hero-section .iphone-wrap .phone-1 {
-    margin-left: -150px;
+    /* margin-left: -150px; */
   }
 }
 
